@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header svg.back {
+  width: 1.5rem;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.container {
+  margin: 1em;
+}
+
+.container form label,
+.container form input {
+  display: block;
+}
+
+.container form h3 {
+  font-size: 1.5rem;
+}
+
+.container form label {
+  margin-bottom: 0.1em;
+  font-size: 1.3rem;
+}
+
+.container form input {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  font-size: 1.2rem;
+  padding: 0.5em;
+}
+
+.container form .detailsGroup,
+.container form .priceGroup,
+.container form .locGroup,
+.container form .imageUploadGroup {
+  margin-bottom: 1.5em;
+}
+
+.container form textarea {
+  padding: 0.5em;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border-radius: 0.5em;
+  border: 1px solid #000;
+}
+
+.container form .uploadedImages {
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.container form .uploadedImages .imgContainer {
+  width: 100%;
+  background-color: #f4f4f4;
+  height: 10rem;
+}
+
+.container form .uploadedImages .imgContainer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.container form .form-control {
+  margin-top: 0.5em;
+}
+
+.container form button.postBtn {
+  font-family: inherit;
+  width: 100%;
+  padding: 0.75em 2em;
+  border-radius: 10px;
+  background-color: aqua;
+  font-weight: bold;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.container form p.info {
+  color: gray;
+}
+
+footer {
+  width: 100%;
+}
+
+footer p.copyright {
+  background-color: #f4f4f4;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+/*# sourceMappingURL=postStyle.css.map */

@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // position absolute
+
+  background: url("../images/books-reading-people.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  // determines which on top , least value element is on bottom, available in position absolute and fixed
+
+  // overflow: hidden;
+
+  //   animating
+  animation: introLoad 2s forwards;
+}
+
+.logo {
+  color: #000;
+  font-weight: bold;
+}
+
+nav {
+  // display: none;
+  // to hide the nav
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  text-transform: uppercase;
+  width: 50%;
+  height: 100vh;
+  z-index: 100;
+
+  //   will animate later
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+    a {
+      color: black;
+      padding: 0.75em 2em;
+      display: block;
+
+      &:hover {
+        background-color: rgb(233, 229, 229);
+      }
+    }
+  }
+
+  .close {
+    margin: 2em;
+    float: right;
+    width: 2.5em;
+  }
+}
+
+header {
+  background-color: rgb(237, 235, 235);
+  padding: 1em 1em;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  display: flex;
+  justify-content: space-between;
+
+  // this svg is inside of header in html, only in scss
+  svg {
+    width: 2rem;
+    margin-top: -0.6em;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  line-height: 3.3rem;
+  margin-top: 2em;
+  font-size: 3rem;
+}
+.subhead {
+  font-size: 1.4rem;
+}
+
+section.hero {
+  margin: 1.5em;
+  color: #000;
+  height: 90vh;
+  //   animation
+  animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+// Using media query to change design for different screens
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+}
+
+section.products {
+  margin: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+// showing navigation links on top
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+
+  nav {
+    transform: translateX(0);
+    display: block;
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+
+    svg.close {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      //   so child become columns
+      margin: 0;
+      a {
+        color: #000;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+
+        &:hover {
+          text-decoration: underline;
+          background: none;
+        }
+      }
+    }
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    height: 42em;
+    width: 50%;
+  }
+
+  .logo {
+    color: black;
+    span {
+      color: red;
+    }
+  }
+
+  section.hero {
+    color: black;
+    width: 50%;
+    height: auto;
+    margin-bottom: 8em;
+  }
+
+  section.products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+nav.open-nav {
+  transform: translateX(0%);
+}
+
+// Footer Styling
+footer {
+  width: 100%;
+  p.copyright {
+    background-color: #f4f4f4;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+}
+
+/* Search Bar Styling */
+.search-bar form {
+  margin-top: 1em;
+  input[type="text"]#search-bar {
+    background: url("../images/magnifying-glass-solid.svg") 1% 50% no-repeat;
+    background-size: 2em;
+    background-color: #fff;
+    width: 100%;
+    border: 0.05rem solid #000;
+    border-radius: 2em;
+    padding: 1em;
+    padding-left: 3em;
+    font-size: 1em;
+
+    &:hover {
+      box-shadow: 1px 1px 8px 1px #dcdcdc;
+    }
+    &:focus {
+      border: 1px solid #008abf;
+      transition: 0.35s ease;
+      color: #008abf;
+    }
+  }
+
+  button {
+    display: none;
+  }
+}
+
+// Card Styling
+.card {
+  border: 1px solid #000;
+  border-radius: 1em;
+  margin: 1em;
+  img {
+    width: 100%;
+    height: 20em;
+    object-fit: contain;
+    margin-top: 1em;
+  }
+
+  .card_heading {
+    padding: 1em;
+    padding-top: 0;
+    h1 {
+      font-size: 3rem;
+      font-weight: lighter;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgb(93, 77, 77);
+    }
+  }
+
+  .card_bottom {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    margin: 1em;
+  }
+}
+
+main:first-child {
+  margin: 0;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+// showing navigation links on top
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    // quick way to center element
+  }
+
+  section.products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Defining animation
+@keyframes introLoad {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+// Defining animation
+@keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
