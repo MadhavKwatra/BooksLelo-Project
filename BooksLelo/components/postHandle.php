@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result1 = mysqli_query($conn, $sql);
 
             //echo "Inserted Successfully";
-            header("Location: /bookslelo?adPosted=true");
+            header("Location: /bookslelo-project/bookslelo?adPosted=true");
         } else {
 
             echo "error : " . mysqli_error($conn);
@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "<h1>";
         echo $msg;
-        echo '<br><a href="/bookslelo/post.php">Try again</a>';
+        echo '<br><a href="/bookslelo-project/bookslelo/post.php">Try again</a>';
         echo "</h1>";
     }
 }

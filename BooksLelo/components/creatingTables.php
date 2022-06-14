@@ -23,7 +23,7 @@ if ($result) {
 }
 
 // Creating users table
-$sql = "CREATE TABLE `bookslelodb`.`users` ( `u_id` INT(5) NOT NULL AUTO_INCREMENT ,  `u_username` VARCHAR(255) NOT NULL ,  `u_total_ads` INT(10) NOT NULL DEFAULT '0' ,  `u_phone` INT(15) NOT NULL ,  `u_fname` VARCHAR(50) NOT NULL ,  `u_lname` VARCHAR(50) NOT NULL ,  `u_pwd_hash` VARCHAR(255) NOT NULL ,   `u_timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`u_id`)) ENGINE = InnoDB";
+$sql = "CREATE TABLE `bookslelodb`.`users` ( `u_id` INT(5) NOT NULL AUTO_INCREMENT ,  `u_username` VARCHAR(255) NOT NULL ,  `u_total_ads` INT(10) NOT NULL DEFAULT '0' ,  `u_phone` BIGINT(15) NOT NULL ,  `u_fname` VARCHAR(50) NOT NULL ,  `u_lname` VARCHAR(50) NOT NULL ,  `u_pwd_hash` VARCHAR(255) NOT NULL ,   `u_timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`u_id`)) ENGINE = InnoDB";
 
 $result = mysqli_query($conn, $sql);
 

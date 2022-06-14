@@ -1,7 +1,7 @@
 <?php
 session_start();
 echo '<header>
-<a href="/bookslelo" class="logo">Books<span>Lelo</span> </a>
+<a href="/bookslelo-project/bookslelo" class="logo">Books<span>Lelo</span> </a>
 
 <!-- Navigation -->
 <nav>
@@ -19,18 +19,18 @@ if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
   }>Hello <strong>' . $_SESSION['username'] . '</strong>!</p>';
 }
 echo '<ul>
-    <li><a href="/bookslelo">Home</a></li>
+    <li><a href="/bookslelo-project/bookslelo">Home</a></li>
     <li><a href="post.php">Post an Ad</a></li>
     ';
 // showing logout and My ads button
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
-  echo '<li><a href="/bookslelo/myAds.php">My Ads</a></li>
+  echo '<li><a href="/bookslelo-project/bookslelo/myAds.php">My Ads</a></li>
     <li><a href="components/logOutHandle.php">Log Out</a></li>';
 } else {
 
   // else show login and signup
-  echo '<li><a href="/bookslelo/logIn.php">Login</a></li>';
-  echo '<li><a href="/bookslelo/signUp.php">Sign Up</a></li>';
+  echo '<li><a href="/bookslelo-project/bookslelo/logIn.php">Login</a></li>';
+  echo '<li><a href="/bookslelo-project/bookslelo/signUp.php">Sign Up</a></li>';
 }
 
 echo '</ul>

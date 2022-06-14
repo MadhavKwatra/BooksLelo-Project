@@ -55,7 +55,7 @@ require 'components/ConnectingToDB.php';
 
       //username doesn't exist
       if (isset($_GET["loggedIn"]) && $_GET["loggedIn"] == "false") {
-        echo "<p>Username doesn't exist.<a href=\"/bookslelo/signUp.php\">Click here</a> to create a new account</p>";
+        echo "<p>Username doesn't exist.<a href=\"/bookslelo-project/bookslelo/signUp.php\">Click here</a> to create a new account</p>";
       }
 
       //ad posted 
@@ -116,7 +116,7 @@ require 'components/ConnectingToDB.php';
         </div>';
         }
         if ($noBooks) {
-          echo '<h1>There are no ads available right now.<a style="font-size: inherit;" href="/bookslelo/post.php">Click Here</a> to post an ad.</h1>';
+          echo '<h1>There are no ads available right now.<a style="font-size: inherit;" href="/bookslelo-project/bookslelo/post.php">Click Here</a> to post an ad.</h1>';
         }
         ?>
       </section>

@@ -22,14 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["userId"] = $row['u_id'];
 
             // redirecting to homepage
-            header("Location: /bookslelo?loggedIn=true&user=$username");
+            header("Location: /bookslelo-project/bookslelo?loggedIn=true&user=$username");
         } else {
 
             // dont remember password
-            header("Location: /bookslelo?loggedIn=false&user=$username");
+            header("Location: /bookslelo-project/bookslelo?loggedIn=false&user=$username");
         }
     } else {
         // username dont exist
-        header("Location: /bookslelo?loggedIn=false");
+        header("Location: /bookslelo-project/bookslelo?loggedIn=false");
     }
 }

@@ -109,7 +109,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             </button>';
           } else {
 
-            echo '<h3>You need to be logged in to view the seller\'s contact info. <a href="/bookslelo/login.php">Click Here</a> to do so</h3>';
+            echo '<h3>You need to be logged in to view the seller\'s contact info. <a href="/bookslelo-project/bookslelo/login.php">Click Here</a> to do so</h3>';
           }
           ?>
         </div>
