@@ -39,10 +39,10 @@ session_start();
       <div class="detailsGroup">
         <h3>Add some details about the book</h3>
         <div class="form-control">
-          <label for="bookTitle">Book title</label><input type="text" id="bookTitle" placeholder="e.g. Atomic Habits" pattern="[a-zA-Z]{1,255}" maxlength=255 title="Only alphabets are allowed" name="bookTitle" required />
+          <label for="bookTitle">Book title</label><input type="text" id="bookTitle" placeholder="e.g. Atomic Habits" pattern="[a-z A-Z]{1,255}" maxlength=255 title="Only alphabets are allowed" name="bookTitle" required />
         </div>
         <div class="form-control">
-          <label>Author</label><input type="text" name="author" placeholder="e.g. James Clear" pattern="[a-zA-Z]{1,255}" maxlength=255 title="Only alphabets are allowed" required />
+          <label>Author</label><input type="text" name="author" placeholder="e.g. James Clear" pattern="[a-z A-Z]{1,255}" maxlength=255 title="Only alphabets are allowed" required />
         </div>
         <div class="form-control">
           <label for="semester-select">For Semester:</label>

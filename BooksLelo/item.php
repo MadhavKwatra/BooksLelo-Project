@@ -41,7 +41,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/item.css" />
-  <title>The Da Vinci Code</title>
+  <title><?php echo $bTitle; ?></title>
 </head>
 
 <body>

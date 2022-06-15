@@ -142,18 +142,18 @@ if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == "true" && isset($_G
     // converting deletes to real array using Array.from()
     Array.from(deletes).forEach((member) => {
       member.addEventListener("click", (e) => {
-        // console.log("edit ", );
 
         // storing bookId of value to be deleted
-        bookId = e.target.id.substr(1, );
+        bookId = e.target.id.substr(1);
         // it removes 1 starting character
 
 
         // confirmation
         if (confirm("Are you Sure you want to Delete This Ad? People won't be able to see this ad on the search then.")) {
-          // console.log("Yes");
+          console.log("Yes");
+          // console.log(`/bookslelo-project/bookslelo/myAds.php?delete=${bookId}`);
+
           window.location = `/bookslelo-project/bookslelo/myAds.php?delete=${bookId}`;
-          // TODO : create form and use post for security
         } else {
           console.log("No");
         }

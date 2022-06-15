@@ -50,11 +50,11 @@ require 'components/ConnectingToDB.php';
 
       //username exists and password incorrect message
       if (isset($_GET["loggedIn"]) && $_GET["loggedIn"] == "false" && isset($_GET["user"])) {
-        echo "<p>$username your password is incorrect. Try Again!</p>";
+        echo "<p> {$_GET['user']} your password is incorrect. Try Again!</p>";
       }
 
       //username doesn't exist
-      if (isset($_GET["loggedIn"]) && $_GET["loggedIn"] == "false") {
+      if (isset($_GET["loggedIn"]) && $_GET["loggedIn"] == "false" && !isset($_GET["user"])) {
         echo "<p>Username doesn't exist.<a href=\"/bookslelo-project/bookslelo/signUp.php\">Click here</a> to create a new account</p>";
       }
 
